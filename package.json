@@ -1,0 +1,29 @@
+{
+  "name": "react-bookmark",
+  "version": "0.0.0",
+  "description": "My primo module",
+  "license": "MIT",
+  "repository": "jxom/react-bookmark",
+  "author": {
+    "name": "jxom",
+    "email": "jakemoxey@gmail.com",
+    "url": "jxom.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.0"
+  }
+}
