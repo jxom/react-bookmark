@@ -9,11 +9,32 @@
     "email": "jakemoxey@gmail.com",
     "url": "jxom.io"
   },
+  "main": "lib/index.js",
+  "xo": {
+    "extends": "xo-react",
+    "parser": "babel-eslint",
+    "space": true,
+    "rules": {
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "react/react-in-jsx-scope": 0,
+      "react/no-danger": 0,
+      "react/forbid-component-props": 0
+    },
+    "globals": [
+      "window",
+      "navigator"
+    ]
+  },
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo",
+    "build": "rimraf lib && npm run test && babel -d lib/ src/",
+    "prepublish": "npm run build"
   },
   "files": [
     "index.js"
@@ -21,9 +42,20 @@
   "keywords": [
     ""
   ],
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint-config-xo-react": "^0.11.1",
+    "eslint-plugin-react": "^6.10.3",
+    "rimraf": "^2.6.1",
     "xo": "^0.17.0"
   }
 }
