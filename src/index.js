@@ -15,11 +15,13 @@ const Icon = styled.img`
 
 export class Bookmark extends Component {
   handleAddBookmark = () => {
-    const { title, href } = this.props;
+    const { title, href, onAddBookmark } = this.props;
 
     if (window.external && window.external.AddFavourite) {
       window.external.AddFavourite(href, title); // eslint-disable-line new-cap
     }
+
+    onAddBookmark();
   }
 
   renderDesktop = () => {
@@ -108,14 +110,16 @@ Bookmark.propTypes = {
   className: PropTypes.string,
   linkClassName: PropTypes.string,
   title: PropTypes.string,
-  href: PropTypes.string
+  href: PropTypes.string,
+  onAddBookmark: PropTypes.func
 };
 
 Bookmark.defaultProps = {
   className: '',
   linkClassName: '',
   title: '',
-  href: '#'
+  href: '#',
+  onAddBookmark: () => {}
 };
 
 export default Bookmark;
