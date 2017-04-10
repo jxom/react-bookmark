@@ -12,7 +12,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "xo",
-    "build": "rimraf lib && npm run test && babel -d lib/ src/"
+    "build": "rimraf lib && npm run test && babel -d lib/ src/",
+    "prepublish": "npm run build"
   },
   "xo": {
     "extends": "xo-react",
