@@ -10,9 +10,9 @@ export class Bookmark extends Component {
   }
 
   render() {
-    const { className, title, href } = this.props;
+    const { className, linkClassName, title, href } = this.props;
     const addToBookmarkLink = props =>
-      <a onClick={this.handleAddBookmark} {...props}>Add this page to your bookmarks</a>;
+      <a className={linkClassName} onClick={this.handleAddBookmark} {...props}>Add this page to your bookmarks</a>;
 
     let commandButton = 'Ctrl';
     if (/Mac/i.test(navigator.userAgent)) {
@@ -45,6 +45,7 @@ export class Bookmark extends Component {
 
 Bookmark.propTypes = {
   className: PropTypes.string,
+  linkClassName: PropTypes.string,
   title: PropTypes.string,
   href: PropTypes.string
 };
