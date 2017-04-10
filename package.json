@@ -37,7 +37,8 @@
     "node": ">=4"
   },
   "files": [
-    "lib/index.js"
+    "lib/index.js",
+    "lib/images.js"
   ],
   "keywords": [
     ""
