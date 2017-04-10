@@ -52,6 +52,7 @@ Bookmark.propTypes = {
 
 Bookmark.defaultProps = {
   className: '',
+  linkClassName: '',
   title: '',
   href: '#'
 };
