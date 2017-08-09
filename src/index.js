@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import platform from 'platform';
 import styled from 'styled-components';
 import { SAFARI_SHARE, MENU_ICON, STAR_ICON } from './images';
